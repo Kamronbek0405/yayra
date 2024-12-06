@@ -14,46 +14,46 @@ export const Hero = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
   };
 
   return (
     <Slider {...settings} >
-      <div className='h-[720px] flex items-center relative py-10 '>
+      <div className=' flex flex-col items-center   h-[500px]  lg:h-[720px]  lg:flex lg:flex-row lg:items-center relative lg:py-10'>
         {heroData?.slice(0, 1).map((item) => {
           const words = item.text.split(" ");
-          const lastWord = words[words.length - 1]; // Oxirgi so'zni ajratib olish
+          const lastWord = words[words.length - 1]; 
 
           return (
-            <div key={item.id}> {/* Yagona key bu yerda */}
-              <h1 style={{ transform: "scaleY(1.5)" }} className="text-7xl font-extrabold w-[300px] top-52 left-[300px] absolute tracking-widest">
+            <div key={item.id}>
+              <h1 style={{ transform: "scaleY(1.5)" }} className=" text-xl  top-[300px] left-20 md:-bottom-40 md:text-4xl md:w-[320px] lg:text-7xl font-extrabold lg:w-[300px] lg:top-60 lg:left-[300px] absolute tracking-widest">
                 {words.slice(0, -1).join(" ").toUpperCase()} <span className="text-blue-400">{lastWord.toUpperCase()}</span>
               </h1>
-              <Button className={"bottom-40 left-[300px] absolute px-8 py-5"}>Buyurtma berish</Button>
+              <Button className={"  top-[400px] md:top-[350px] md:px-6 md:py-5 left-20 absolute lg:px-8 lg:py-5 lg:left-[300px] lg:mt-20"}>Buyurtma berish</Button>
             </div>
           );
         })}
-        <div className='absolute right-20 top-24'>
-          <Bucket />
+        <div className='absolute  md:left-[420px] md:top-16 lg:left-[60%] lg:top-20 left-14 top-5'>
+          <Bucket />  
         </div>
       </div>
-      <div className='h-[720px] flex items-center relative py-10'>
+      <div className=' flex flex-col items-center   h-[500px]  lg:h-[720px]  lg:flex lg:flex-row lg:items-center relative lg:py-10'>
         {heroData?.slice(0, 1).map((item) => {
           const words = item.text.split(" ");
-          const lastWord = words[words.length - 1]; // Oxirgi so'zni ajratib olish
+          const lastWord = words[words.length - 1]; 
 
           return (
-            <div key={item.id}> {/* Yagona key bu yerda */}
-              <h1 style={{ transform: "scaleY(1.5)" }} className="text-7xl font-extrabold w-[300px] top-52 left-[300px] absolute tracking-widest">
+            <div key={item.id}>
+              <h1 style={{ transform: "scaleY(1.5)" }} className=" text-xl  top-[300px] left-20 md:-bottom-40 md:text-4xl md:w-[320px] lg:text-7xl font-extrabold lg:w-[300px] lg:top-60 lg:left-[300px] absolute tracking-widest">
                 {words.slice(0, -1).join(" ").toUpperCase()} <span className="text-blue-400">{lastWord.toUpperCase()}</span>
               </h1>
-              <Button className={"bottom-40 left-[300px] absolute px-8 py-5"}>Buyurtma berish</Button>
+              <Button className={"  top-[400px] md:top-[350px] md:px-6 md:py-5 left-20 absolute lg:px-8 lg:py-5 lg:left-[300px] lg:mt-20"}>Buyurtma berish</Button>
             </div>
           );
         })}
-        <div className='absolute right-20 top-24'>
-          <Bucket2 />
+        <div className='absolute  md:left-[420px] md:top-16 lg:left-[60%] lg:top-20 left-14 top-5'>
+          <Bucket2 />  
         </div>
       </div>
     </Slider>

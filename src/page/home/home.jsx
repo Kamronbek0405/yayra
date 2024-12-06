@@ -14,7 +14,7 @@ export const Home = () => {
   
   return (
     <div >
-      <section className='m-auto max-w-[1519px] w-[100%] h-[100vh] bg-[url("/blur.png")] bg-no-repeat bg-cover  '>
+      <section className=' w-[100%]  h-[500px]  m-auto lg:max-w-[1519px] lg:w-[100%] lg:h-[100vh] bg-[url("/blur.png")] bg-no-repeat bg-cover  '>
         <Hero />
         </section>
       <section id='business' className=' w-[100%]  lg:max-w-[1519px] lg:w-[100%] lg:h-[50vh] m-auto '>
