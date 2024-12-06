@@ -216,3 +216,18 @@ export const foooterData =[
     },
 
 ]
+
+export const pricing = [
+    {
+        id: 1,
+       name: "Supurgilar",
+    },
+    {
+        id: 2,
+        name: "Machalkalar",
+    },
+    {
+        id: 3,
+        name: "Chelaklar",
+    }
+]

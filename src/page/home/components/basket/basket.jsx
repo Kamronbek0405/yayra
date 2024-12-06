@@ -1,21 +1,42 @@
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useLocation } from 'react-router-dom';
 
 export const Basket = () => {
+  const location = useLocation(); // Hozirgi yo'nalishni olish
+  
   return (
-    <div >
+    <div>
       <nav>
         <ul className='p-2 ml-10'>
-          <li><Link to="/basket/broom">Broom</Link></li>
-          <li><Link to="/basket/machalka">Machalka</Link></li>
-          <li><Link to="/basket/buckets">Buckets</Link></li>
+          <li>
+            <Link
+              to="/"
+              className={`p-2 ${location.pathname === '/' ? 'bg-blue-500 text-white' : ''}`}
+            >
+              Broom
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/machalka"
+              className={`p-2 ${location.pathname === '/machalka' ? 'bg-blue-500 text-white' : ''}`}
+            >
+              Machalka
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/buckets"
+              className={`p-2 ${location.pathname === '/buckets' ? 'bg-blue-500 text-white' : ''}`}
+            >
+              Buckets
+            </Link>
+          </li>
         </ul>
       </nav>
-
-      {/* Ichki sahifalar mana shu Outlet ichida ko'rinadi */}
-      <div >
+      <main>
         <Outlet />
-      </div>
+      </main>
     </div>
   );
 };

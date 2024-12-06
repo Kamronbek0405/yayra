@@ -30,24 +30,25 @@ export const Login = () => {
       navigate('/');
     } else {
       // Xato bo'lsa, xato xabarini chiqarish
-      setError("email", { type: "manual", message: "Yaroqsiz elektron pochta yoki parol" });
+      setError("email", { type: "manual", message: "Kirish uchun parol: 1234 email: admin@gmail.com" });
       setError("password", { type: "manual", message: "Yaroqsiz elektron pochta yoki parol" });
     }
   };
 
   return (
-    <div className='w-[100%] h-[100vh] flex items-center justify-center'>
-      <div className='flex items-center justify-between max-w-[1300px] w-[100%] bg-white'>
-        <div className='bg-[url("https://www.meridean.org/frontend/images/web-student-login-img.png")] bg-no-repeat bg-cover w-[800px] h-[500px]'>
+    <div className='w-[100%] h-[100vh] md:h-auto lg:flex lg:items-center lg:justify-center  '>
+      <div className=' w-[100%] py-10 flex flex-col items-center gap-10 md:flex   lg:flex-row lg:flex lg:items-center lg:justify-between  lg:max-w-[1300px] lg:w-[100%] lg:mt-20 bg-white'>
+        <div className='bg-[url("https://www.meridean.org/frontend/images/web-student-login-img.png")] bg-no-repeat bg-cover w-[340px] h-[210px] md:order-2 md:w-[750px] md:h-[500px] order-2  lg:w-[800px] lg:h-[500px]'>
         </div>
-        <div className='flex flex-col items-center w-[400px] h-[350px] border-blue-600 border rounded-xl shadow-lg shadow-blue-300 hover:shadow-md'>
+        <div className='flex flex-col items-center w-[330px] h-[350px] md:order-1 md:w-[600px] md:h-[400px] order-1 lg:w-[400px] lg:h-[350px] border-blue-600 border rounded-xl shadow-lg shadow-blue-300 lg:hover:shadow-md'>
           <h1 className='text-3xl text-blue-500 font-medium mt-3'>Login</h1>
           <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col  mt-10'>
-            <Input {...register('email')} type='email' placeholder="Email" className="w-[300px]   h-[45px] border-blue-400 outline-none" />
+            <Input {...register('email')} type='email' placeholder="Email" className=" w-[250px] md:w-[400px]   lg:w-[300px]   h-[45px] border-blue-400 outline-none" />
             
-            <Input {...register('password')} type='password' placeholder="Password" className="w-[300px] mt-5 h-[45px] border-blue-400 outline-none" />
+            <Input {...register('password')} type='password' placeholder="Password" className=" w-[250px] md:w-[400px]  lg:w-[300px] mt-5 h-[45px] border-blue-400 outline-none" />
             {errors.password && <p className="text-red-500 font-medium text-sm transition-all duration-1000 mt-1">{errors.password.message}</p>}
-            <Button type='submit' className="py-2 w-[300px] h-[45px] mt-5 rounded-lg">Send</Button>
+            <Button type='submit' className="py-2 w-[250px] md:w-[400px]  lg:w-[300px] h-[45px] mt-5 rounded-lg">Send</Button>
+            {errors.email && <p className="text-red-500 font-medium text-sm transition-all duration-1000 mt-1">{errors.email.message}</p>}
           </form>
           <Link className='font-bold text-red-500 mt-5' to={"/register"}>Register</Link>
         </div>

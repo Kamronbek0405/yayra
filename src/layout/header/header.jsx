@@ -63,19 +63,19 @@ export const Header = () => {
           <nav>
             <ul className='flex flex-col items-center  gap-6 text-xl font-medium '>
               <li>
-                <Link className='mr-5' to={'/business'}>
+               <a className='mr-5' href='#business'>
                   Business
-                </Link>
+                </a>
               </li>
               <li>
-                <Link className='mr-5' to={'/blog'}>
+                <a className='mr-5' href='#blog'>
                   Blog
-                </Link>
+                </a>
               </li>
               <li>
-                <Link className='mr-5' to={'/pricing'}>
+                <a className='mr-5' to={'#pricing'}>
                   Pricing
-                </Link>
+                </a>
               </li>
               <li>
                 <div className=''>
@@ -117,19 +117,19 @@ export const Header = () => {
                 </div>
               </li>
               <li>
-                <Link className='mr-5' to={'/business'}>
+                <a className='mr-5' href='#business'>
                   Business
-                </Link>
+                </a>
               </li>
               <li>
-                <Link className='mr-5' to={'/blog'}>
+              <a className='mr-5' href='#blog'>
                   Blog
-                </Link>
+                </a>
               </li>
               <li>
-                <Link className='mr-5' to={'/pricing'}>
+              <a className='mr-5' to={'#pricing'}>
                   Pricing
-                </Link>
+                </a>
               </li>
               
             </ul>
