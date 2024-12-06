@@ -29,7 +29,7 @@ export const Home = () => {
       <section className=' w-[100%] h-[210vh] md:h-[121vh]  lg:w-[1519px] lg:h-[130vh] m-auto'>
         <Cotolog/>
       </section>
-      <section className=' w-[100%] h-[520px] bg-slate-500  lg:w-[1519px]  md:h-[520px] lg:h-[100vh] overflow-hidden  m-auto flex items-center  justify-center'>
+      <section className=' w-[100%] h-[520px]   lg:w-[1519px]  md:h-[520px] lg:h-[100vh] overflow-hidden  m-auto flex items-center  justify-center'>
         <Clients/>
       </section>
       <section id='blog' className=' w-[100%] h-[220vh]  md:h-[110vh] lg:w-[1519px] lg:h-[100vh] overflow-hidden m-auto flex items-center  justify-center '>
