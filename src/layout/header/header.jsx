@@ -44,6 +44,13 @@ export const Header = () => {
     setIsMenuOpen(!isMenuOpen); // Toggle menu visibility
   };
 
+  const scrollToSection = (sectionId) => {
+    const section = document.querySelector(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' }); // Smooth scrolling
+    }
+  };
+
   return (
     <div className='w-[100%] py-5 bg-[url("/blur.png")] bg-no-repeat bg-cover flex items-center justify-between px-4'>
       <Link to={'/'}>
@@ -63,17 +70,17 @@ export const Header = () => {
           <nav>
             <ul className='flex flex-col items-center  gap-6 text-xl font-medium '>
               <li>
-               <a className='mr-5' href='#business'>
+                <a className='mr-5' onClick={() => scrollToSection('#business')}>
                   Business
                 </a>
               </li>
               <li>
-                <a className='mr-5' href='#blog'>
+                <a className='mr-5' onClick={() => scrollToSection('#blog')}>
                   Blog
                 </a>
               </li>
               <li>
-                <a className='mr-5' to={'#pricing'}>
+                <a className='mr-5' onClick={() => scrollToSection('#pricing')}>
                   Pricing
                 </a>
               </li>
@@ -96,17 +103,16 @@ export const Header = () => {
       )}
 
       {/* Links section, hidden at 300px for larger screens */}
-     
 
       {/* Buttons section, shown only when width is more than 900px */}
       {windowWidth > 800 && (
-        <div className='flex items-center gap-10'>
+        <div className='flex items-center gap-10 '>
           <nav>
-            <ul className='flex  items-start  '>
-            <li>
+            <ul className='flex  items-start lg:gap-5 mr-40 font-medium '>
+              <li>
                 <div className='w-[110px] text-2xl'>
-                  <Select>
-                    <SelectTrigger className={'text-lg'}>Product</SelectTrigger>
+                  <Select className={"border-none p-0"}>
+                    <SelectTrigger className={'lg:text-md'}>Product</SelectTrigger>
                     <SelectContent>
                       <SelectItem value='option1'>Option 1</SelectItem>
                       <SelectItem value='option2'>Option 2</SelectItem>
@@ -117,21 +123,20 @@ export const Header = () => {
                 </div>
               </li>
               <li>
-                <a className='mr-5' href='#business'>
+                <a className='mr-5' onClick={() => scrollToSection('#business')}>
                   Business
                 </a>
               </li>
               <li>
-              <a className='mr-5' href='#blog'>
+                <a className='mr-5' onClick={() => scrollToSection('#blog')}>
                   Blog
                 </a>
               </li>
               <li>
-              <a className='mr-5' to={'#pricing'}>
+                <a className='mr-5' onClick={() => scrollToSection('#pricing')}>
                   Pricing
                 </a>
               </li>
-              
             </ul>
           </nav>
           <Button

@@ -177,7 +177,7 @@ import { Instagram } from '@/icon/instagram/instagram';
 import { Twitter } from '@/icon/twitter';
 import { Email } from '@/icon/email';
 import { Logo } from '@/icon/logo';
-export const foooterData =[
+export const foooterData = [
     {
         id: 1,
         title: "Phosf luorescently engage worldwide method process shopping.",
@@ -217,17 +217,75 @@ export const foooterData =[
 
 ]
 
-export const pricing = [
+import broomImg from '@/page/home/components/basket/basket-img/basketimg.png'
+import bucketImg from '@/page/home/components/basket/basket-img/bucketimg.png'
+import machalkaImg from '@/page/home/components/basket/basket-img/machalkaimg.png'
+export const pricingData = [
     {
         id: 1,
-       name: "Supurgilar",
+        name: "Supurgilar",
+    
     },
     {
         id: 2,
         name: "Machalkalar",
+       
+
+
     },
     {
         id: 3,
         name: "Chelaklar",
+       
+
+
     }
+]
+
+import { Basket } from '@/icon/basket';
+import { Arrow } from '@/icon/arrow';
+import basketImg2 from '@/page/home/components/basket/basket-img/basketimg2.png'
+ export const basketData = [
+    {
+        id: 1,
+        img2: basketImg2,
+        img: broomImg,
+        price: "2 300 000 So’m",
+        buy: "Buy now",
+        description2: "Basin mixer",
+        title: "Shower mixer",
+        discription: "Kale Gallery is a multi-brand sanitary ware showroom",
+        bottomText: "Explore all",
+        basketIcon: Basket,
+        arrowIcon: Arrow,
+
+    },
+    {
+        id: 2,
+        img: machalkaImg,
+        price: "1 200 000 So’m",
+        buy: "Buy now",
+        description2: "Basin mixer",
+        title: "Shower mixer",
+        discription: "Kale Gallery is a multi-brand sanitary ware showroom",
+        bottomText: "Explore all",
+        basketIcon: Basket,
+        arrowIcon: Arrow,
+
+
+    },
+    {
+        id: 3,
+       
+        img: bucketImg,
+        price: "3 100 000 So’m",
+        buy: "Buy now",
+        description2: "Basin mixer",
+        title: "Shower mixer",
+        discription: "Kale Gallery is a multi-brand sanitary ware showroom",
+        bottomText: "Explore all",
+        basketIcon: Basket,
+        arrowIcon: Arrow,
+    }
+
 ]

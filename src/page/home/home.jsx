@@ -20,7 +20,7 @@ export const Home = () => {
       <section id='business' className=' w-[100%]  lg:max-w-[1519px] lg:w-[100%] lg:h-[50vh] m-auto '>
         <Busines />
       </section>
-      <section id='pricing' className='lg:w-[1519px] lg:h-[100vh] bg-blue-300 '>
+      <section id='pricing' className='lg:w-[1519px] lg:h-[100vh]   '>
         <Basket />
       </section>
       <section className=' w-[100%] h-[60vh] overflow-hidden lg:w-[1519px] lg:h-[100vh]  flex items-center justify-center'>
