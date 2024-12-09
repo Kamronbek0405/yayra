@@ -4,10 +4,13 @@ import { pricingData } from '@/data/data-service';
 import { basketData } from '@/data/data-service';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addProduct } from '@/page/redux/products/product-reducer';
 
 export const BasketDeteil = () => {
     const { id } = useParams();
     const navigate = useNavigate()
+    const dispatch = useDispatch()
     const pricingItem = pricingData.find(item => item.id === parseInt(id));
     const basketItem = basketData.find(item => item.id === parseInt(id));
 
@@ -17,8 +20,20 @@ export const BasketDeteil = () => {
 
 
     const buyClick = () => {
+        dispatch(addProduct({
+            id: basketItem.id, // Basket item ID si
+            name: pricingItem.name, // Pricing item name
+            price: basketItem.price, // Basket item price
+            img: basketItem.img,
+            description: basketItem.discription,
+            description2: basketItem.description2,
+            title: basketItem.title,
+        }))
         navigate(`/basket-single/${id}`); 
     };
+    const basketShooting = () => {
+        navigate(`/basket-single/${id}`); 
+    }
 
     return (
         <div className=' flex overflow-hidden flex-col items-center gap-6 mt-7 md:w-[100%] md:h-[120vh] md:py-5 md:items-center md:justify-center md:flex md:flex-row md:flex-wrap  lg:h-[670px] bg-slate-100 lg:flex-row lg:flex lg:items-center  lg:justify-center lg:gap-7 '>
@@ -28,8 +43,8 @@ export const BasketDeteil = () => {
                 <h2 className='font-medium'>{pricingItem.name}</h2>
                 <p className='text-gray-500 text-sm mb-3'>{basketItem.description2}</p>
                <div className='flex  items-center gap-5'>
-               <Button className="px-14 text-lg py-5 text-white">{basketItem.buy}</Button>
-               {basketItem.basketIcon && <basketItem.basketIcon/>}
+               <Button  onClick={buyClick}  className="px-14 text-lg py-5 text-white">{basketItem.buy}</Button>
+               <span onClick={basketShooting}>{basketItem.basketIcon && <basketItem.basketIcon/>}</span>
                {basketItem.arrowIcon && <basketItem.arrowIcon/>}
                </div>
                 </div>
@@ -40,7 +55,7 @@ export const BasketDeteil = () => {
                     <img className='  md:ml-8  md:w-[180px] md:h-[180px] lg:w-[180px] lg:h-[180px] lg:-ml-0.5' src={basketItem.img} alt="" />
                     <p className='lg:mt-2 md:mt-14 font-medium lg:text-lg'>{basketItem.price}</p>
                     <div className='flex items-center mt-1 gap-2 lg:gap-5 lg:mt-3'>
-                    {basketItem.basketIcon && <basketItem.basketIcon/>}
+                    <span onClick={basketShooting}>{basketItem.basketIcon && <basketItem.basketIcon/>}</span>
                     {basketItem.arrowIcon && <basketItem.arrowIcon/>}
                     </div>
                 </div>
@@ -48,7 +63,7 @@ export const BasketDeteil = () => {
                     <img className='  md:ml-8  md:w-[180px] md:h-[180px] lg:w-[180px] lg:h-[180px] lg:-ml-0.5' src={basketItem.img} alt="" />
                     <p className='lg:mt-2 md:mt-14 font-medium lg:text-lg'>{basketItem.price}</p>
                     <div className='flex items-center gap-2 lg:gap-5 lg:mt-3'>
-                    {basketItem.basketIcon && <basketItem.basketIcon/>}
+                    <span onClick={basketShooting}>{basketItem.basketIcon && <basketItem.basketIcon/>}</span>
                     {basketItem.arrowIcon && <basketItem.arrowIcon/>}
                     </div>
                 </div>
@@ -74,7 +89,7 @@ export const BasketDeteil = () => {
                 <p className='text-gray-500 text-sm mb-3'>{basketItem.description2}</p>
                <div className='flex  items-center gap-5'>
                <Button onClick={buyClick}  className="px-14 text-lg py-5 text-white">{basketItem.buy}</Button>
-               {basketItem.basketIcon && <basketItem.basketIcon/>}
+               <span onClick={basketShooting}>{basketItem.basketIcon && <basketItem.basketIcon/>}</span>
                {basketItem.arrowIcon && <basketItem.arrowIcon/>}
                </div>
                 </div>

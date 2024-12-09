@@ -52,8 +52,8 @@ export const Header = () => {
   };
 
   return (
-    <div className='w-[100%] py-5 bg-[url("/blur.png")] bg-no-repeat bg-cover flex items-center justify-between px-4'>
-      <Link className='md:' to={'/'}>
+    <div className='w-[100%] m-auto py-5 bg-[url("/blur.png")] bg-no-repeat bg-cover flex items-center justify-between px-4'>
+      <Link className='m-auto' to={'/'}>
         <img src={Logo} alt='logoImg' />
       </Link>
 
@@ -66,7 +66,7 @@ export const Header = () => {
 
     
       {isMenuOpen && windowWidth <= 800 && (
-        <div className="absolute flex flex-col items-center justify-start top-24 left-0 w-[100%] h-[400px] bg-white z-10 p-5">
+        <div className="absolute  flex flex-col items-center justify-start top-24 left-0 w-[100%] h-[400px] bg-white z-10 p-5">
          
           <nav>
             <ul className='flex flex-col items-center  gap-6 text-xl font-medium '>
@@ -105,7 +105,7 @@ export const Header = () => {
 
     
       {windowWidth > 500 && (
-        <div className=' md:flex md:items-center lg:flex lg:items-center lg:gap-10  '>
+        <div className=' m-auto md:flex md:items-center lg:flex lg:items-center lg:gap-10  '>
         
           <nav>
             <ul className='flex  items-start md:text-sm md:mr-14  lg:text-lg lg:gap-5 lg:mr-40 font-medium '>

@@ -33,6 +33,7 @@ function App() {
           <Route path='machalka' element={<Machalka />} />
           <Route path='buckets' element={<Buckets />} />
         <Route path="pricing/:id" element={<BasketDeteil/>} />
+        
 
         </Route>
         <Route path='basket-single/:id' element={<BasketSingle/>} />

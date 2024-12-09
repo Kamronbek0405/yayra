@@ -20,10 +20,10 @@ export const Home = () => {
       <section id='business' className=' w-[100%]  lg:max-w-[1519px] lg:w-[100%] lg:h-[50vh] m-auto '>
         <Busines />
       </section>
-      <section id='pricing' className='lg:w-[1519px] lg:h-[100vh]   '>
+      <section id='pricing' className='lg:w-[1519px] lg:h-[100vh]  m-auto  '>
         <Basket />
       </section>
-      <section className=' w-[100%] h-[60vh] overflow-hidden lg:w-[1519px] lg:h-[100vh]  flex items-center justify-center'>
+      <section className=' w-[100%] h-[60vh] overflow-hidden m-auto lg:w-[1519px] lg:h-[100vh]  flex items-center justify-center'>
         <Invite/>
       </section>
       <section className=' w-[100%] h-[210vh] md:h-[121vh]  lg:w-[1519px] lg:h-[130vh] m-auto'>
