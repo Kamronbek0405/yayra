@@ -53,7 +53,7 @@ export const Header = () => {
 
   return (
     <div className='w-[100%] py-5 bg-[url("/blur.png")] bg-no-repeat bg-cover flex items-center justify-between px-4'>
-      <Link to={'/'}>
+      <Link className='md:' to={'/'}>
         <img src={Logo} alt='logoImg' />
       </Link>
 
@@ -64,9 +64,10 @@ export const Header = () => {
         </Button>
       )}
 
-      {/* Menu Links when Menu is Open (Mobile View) */}
-      {isMenuOpen && windowWidth <= 999 && (
+    
+      {isMenuOpen && windowWidth <= 800 && (
         <div className="absolute flex flex-col items-center justify-start top-24 left-0 w-[100%] h-[400px] bg-white z-10 p-5">
+         
           <nav>
             <ul className='flex flex-col items-center  gap-6 text-xl font-medium '>
               <li>
@@ -102,16 +103,15 @@ export const Header = () => {
         </div>
       )}
 
-      {/* Links section, hidden at 300px for larger screens */}
-
-      {/* Buttons section, shown only when width is more than 900px */}
-      {windowWidth > 800 && (
-        <div className='flex items-center gap-10 '>
+    
+      {windowWidth > 500 && (
+        <div className=' md:flex md:items-center lg:flex lg:items-center lg:gap-10  '>
+        
           <nav>
-            <ul className='flex  items-start lg:gap-5 mr-40 font-medium '>
+            <ul className='flex  items-start md:text-sm md:mr-14  lg:text-lg lg:gap-5 lg:mr-40 font-medium '>
               <li>
-                <div className='w-[110px] text-2xl'>
-                  <Select className={"border-none p-0"}>
+                <div className=' md:w-[80px]  lg:w-[110px] text-2xl'>
+                  <Select className={"border-none  p-0"}>
                     <SelectTrigger className={'lg:text-md'}>Product</SelectTrigger>
                     <SelectContent>
                       <SelectItem value='option1'>Option 1</SelectItem>
@@ -142,14 +142,14 @@ export const Header = () => {
           <Button
             onClick={register}
             className={
-              'bg-transparent text-black hover:text-white w-[137px] h-[52px] rounded-xl'
+              'bg-transparent md:px-7 md:mr-2 text-black hover:text-white lg:w-[137px] lg:h-[52px] rounded-xl'
             }>
             Sign In
           </Button>
           <Button
             onClick={logo}
             className={
-              'hover:bg-transparent hover:text-black w-[137px] h-[52px] rounded-xl'
+              'hover:bg-transparent md:px-8  hover:text-black lg:w-[137px] lg:h-[52px] rounded-xl'
             }>
             Login
           </Button>

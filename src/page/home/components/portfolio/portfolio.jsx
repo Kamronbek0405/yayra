@@ -1,9 +1,14 @@
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { portfolioData } from '@/data/data-service'
-import React from 'react'
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export const Portfolio = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); 
+  }, []);
   return (
     <div>
         {portfolioData?.map((item) => (
@@ -15,12 +20,12 @@ export const Portfolio = () => {
                </div>
               <form className='flex flex-col gap-5'>
                <div className='w-[320px] '>
-               <Input className={"rounded-full bg-portfolioInput border-none text-white py-6"} type={"text"} placeholder={`${item.name}`} required/>
+               <Input className={"rounded-full bg-portfolioInput border-none text-white py-6"} type={"text"} placeholder={`${item.name}`} required data-aos="fade-right"/>
                </div>
                <div className='w-[320px] '>
-               <Input className={"rounded-full bg-portfolioInput  text-white border-none py-6"} type={"number"}  placeholder={`${item.phone}`} required/>
+               <Input className={"rounded-full bg-portfolioInput  text-white border-none py-6"} type={"number"}  placeholder={`${item.phone}`} required data-aos="fade-left"/>
                </div>
-                <Button className={"w-[320px] rounded-full py-6"} type={"submit"}>{item.textButton}</Button>
+                <Button className={"w-[320px] rounded-full py-6"} type={"submit"} data-aos="fade-right">{item.textButton}</Button>
               </form>
             </div>
         ))}

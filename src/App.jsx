@@ -11,6 +11,7 @@ import { useEffect } from 'react';
 import { loadState } from './config/storage';
 import { useNavigate } from 'react-router-dom';
 import { BasketDeteil } from './page/home/components/basket-deteil';
+import { BasketSingle } from './page/home/components/basket-single';
 
 function App() {
   const navigate = useNavigate()
@@ -32,7 +33,9 @@ function App() {
           <Route path='machalka' element={<Machalka />} />
           <Route path='buckets' element={<Buckets />} />
         <Route path="pricing/:id" element={<BasketDeteil/>} />
+
         </Route>
+        <Route path='basket-single/:id' element={<BasketSingle/>} />
       </Routes>
     </>
   );

@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
- export const Bucket = () => {
+export const BroomIcon = () => {
   return (
     <div className="relative  w-[350px] md:w-[450px] lg:w-[600px]">
       <svg  className="absolute w-[250px] h-[250px] md:w-[350px] md:h-[350px] lg:w-[500px] lg:h-[510px]"  width="519" height="748" viewBox="0 0 519 748" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -15,7 +15,7 @@ import React from 'react';
         <path d="M1.35742 236C1.35742 105.98 117.079 0.5 259.929 0.5C402.779 0.5 518.5 105.98 518.5 236V756.5H1.35742V236Z" stroke="#05192B" />
       </svg>
 
-      <img src="vedro.png" alt="Bucket Image" className="  absolute w-[250px] h-[250px] md:w-[350px] md:h-[350px] lg:w-[500px] lg:h-[500px]   " />
+      <img src="https://pngimg.com/d/broom_PNG16.png" alt="broom img" className=" bg-cover bg-no-repeat  absolute w-[250px] h-[250px] md:w-[350px] md:h-[350px] lg:w-[500px] lg:h-[500px]   " />
     </div>
-  );
-};
+  )
+}
