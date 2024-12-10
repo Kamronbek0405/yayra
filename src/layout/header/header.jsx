@@ -53,11 +53,10 @@ export const Header = () => {
 
   return (
     <div className='w-[100%] m-auto py-5 bg-[url("/blur.png")] bg-no-repeat bg-cover flex items-center justify-between px-4'>
-      <Link className='m-auto' to={'/'}>
+      <Link  to={'/'}>
         <img src={Logo} alt='logoImg' />
       </Link>
 
-      {/* Menu Toggle Button (Menu or X Icon for Mobile) */}
       {windowWidth <= 600 && (
         <Button onClick={toggleMenu} className="text-black text-2xl  outline-none shadow-none bg-transparent hover:bg-transparent">
           {isMenuOpen ? <ExitIcon /> : <MenuIcon />} {/* X icon when menu is open */}
@@ -66,7 +65,7 @@ export const Header = () => {
 
     
       {isMenuOpen && windowWidth <= 800 && (
-        <div className="absolute  flex flex-col items-center justify-start top-24 left-0 w-[100%] h-[400px] bg-white z-10 p-5">
+        <div className="absolute   flex flex-col items-center justify-start top-24 left-0 w-[100%] h-[400px] bg-white z-10 p-5">
          
           <nav>
             <ul className='flex flex-col items-center  gap-6 text-xl font-medium '>
