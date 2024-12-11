@@ -1,8 +1,13 @@
 import { aboutData } from "@/data/data-service";
-import React from "react";
 import Slider from "react-slick";
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export const About = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); // AOS ni boshlash va davomiylikni sozlash
+  }, []);
     const settings = {
         dots: false, 
         arrows: false,
@@ -16,7 +21,7 @@ export const About = () => {
       
       
   return (
-    <div className="slider-container">
+    <div id="started" className="slider-container">
       <Slider {...settings}>
        <div   className="lg:px-32 py-10 overflow-hidden  md:px-10 lg:py-10 px-4 ">
        {aboutData.slice(0,1).map((item) => (
@@ -46,11 +51,11 @@ export const About = () => {
         {aboutData.slice(2,3).map((item) => (
             <div className=" flex flex-col items-center px-7 gap-10 md:gap-20 md:px-10 mt-12 md:flex md:flex-row  lg:flex lg:flex-row lg:gap-20">
                 <div>
-                    <span className="lg:text-lg font-medium text-blue-400">{item.top}</span>
-                    <h1 className="lg:text-6xl md:text-4xl text-lg font-medium lg:w-[480px] tracking-wider lg:mt-3">{item.title}</h1>
-                    <p className="lg:w-[610px] lg:mt-5 text-gray-600 ">{item.description}</p>
+                    <span data-aos="fade-right" className="lg:text-lg font-medium text-blue-400">{item.top}</span>
+                    <h1 data-aos="fade-right" className="lg:text-6xl md:text-4xl text-lg font-medium lg:w-[480px] tracking-wider lg:mt-3">{item.title}</h1>
+                    <p data-aos="fade-right" className="lg:w-[610px] lg:mt-5 text-gray-600 ">{item.description}</p>
                 </div>
-                <iframe className=" w-[330px] rounded-3xl h-[230px] lg:w-[475px] lg:h-[373px]  lg:rounded-3xl"  src="https://www.youtube.com/embed/LMflXm1P2hQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe data-aos="fade-left" className=" w-[330px] rounded-3xl h-[230px] lg:w-[475px] lg:h-[373px]  lg:rounded-3xl"  src="https://www.youtube.com/embed/LMflXm1P2hQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
             </div>
         ))}

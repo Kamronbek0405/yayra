@@ -19,7 +19,7 @@ export const Invite = () => {
                     <div className='relative px-10 text-center z-10 flex flex-col items-center'>
                         <h1 className=' text-lg w-[300px]  md:text-4xl md:w-[600px] lg:text-5xl font-medium lg:w-[800px]' >{item.title}</h1>
                         <p className=' w-[320px] text-sm  md:text-lg  md:w-[550px] md:mt-5 lg:text-lg  lg:w-[550px] lg:mt-5' >{item.description}</p>
-                        <Button className={" md:mt-5 md:tracking-wider lg:px-12 lg:py-6 rounded-full lg:tracking-widest lg:mt-5"}>{item.topText}</Button>
+                        <Button className={" md:mt-5 md:tracking-wider lg:px-12 lg:py-6 rounded-full lg:tracking-widest lg:mt-5"}> <a href="#started">{item.topText}</a> </Button>
                     </div>
                 </div>
             ))}

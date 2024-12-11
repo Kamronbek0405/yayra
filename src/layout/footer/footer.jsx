@@ -52,7 +52,6 @@ export const Footer = () => {
               <a href='#catalog'>{item.text2}</a>
               <a href="#policy">{item.text3}</a>
               <a href="#asked">{item.text4}</a>
-              
             </ul>
           </div>
           ))}
@@ -66,7 +65,6 @@ export const Footer = () => {
               <a href='#policy'>{item.text2}</a>
               <a href="#invite">{item.text3}</a>
               <a href="#contact">{item.text4}</a>
-              
             </ul>
           </div>
           ))}

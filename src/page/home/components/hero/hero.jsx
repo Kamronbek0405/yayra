@@ -15,7 +15,7 @@ export const Hero = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
   };
 
@@ -31,7 +31,7 @@ export const Hero = () => {
               <h1 style={{ transform: "scaleY(1.5)" }} className=" text-xl  top-[300px] left-20 md:top-[150px] md:text-4xl md:w-[320px] lg:text-7xl font-extrabold lg:w-[300px] lg:top-60 lg:left-[300px] absolute tracking-widest">
                 {words.slice(0, -1).join(" ").toUpperCase()} <span className="text-blue-400">{lastWord.toUpperCase()}</span>
               </h1>
-              <Button className={"  top-[400px] md:top-[350px] md:px-6 md:py-5 left-20 absolute lg:px-8 lg:py-5 lg:left-[300px] lg:mt-48"}>Buyurtma berish</Button>
+              <Button className={"top-[400px]  md:top-[350px] md:px-6 md:py-5 left-20 absolute lg:px-8 lg:py-5 lg:left-[300px] lg:mt-48"}> <a  href="#product">Buyurtma berish</a> </Button>
             </div>
           );
         })}
@@ -49,7 +49,7 @@ export const Hero = () => {
               <h1 style={{ transform: "scaleY(1.5)" }} className=" text-xl  top-[300px] left-20 md:top-[150px] md:text-4xl md:w-[320px] lg:text-7xl font-extrabold lg:w-[300px] lg:top-60 lg:left-[300px] absolute tracking-widest">
                 {words.slice(0, -1).join(" ").toUpperCase()} <span className="text-blue-400">{lastWord.toUpperCase()}</span>
               </h1>
-              <Button className={"  top-[400px] md:top-[350px] md:px-6 md:py-5 left-20 absolute lg:px-8 lg:py-5 lg:left-[300px] lg:mt-48"}>Buyurtma berish</Button>
+              <Button className={"  top-[400px] md:top-[350px] md:px-6 md:py-5 left-20 absolute lg:px-8 lg:py-5 lg:left-[300px] lg:mt-48"}><a  href="#product">Buyurtma berish</a></Button>
             </div>
           );
         })}
@@ -67,7 +67,7 @@ export const Hero = () => {
               <h1 style={{ transform: "scaleY(1.5)" }} className=" text-xl  top-[300px] left-20 md:top-[150px] md:text-4xl md:w-[320px] lg:text-7xl font-extrabold lg:w-[300px] lg:top-60 lg:left-[300px] absolute tracking-widest">
                 {words.slice(0, -1).join(" ").toUpperCase()} <span className="text-blue-400">{lastWord.toUpperCase()}</span>
               </h1>
-              <Button className={"  top-[400px] md:top-[350px] md:px-6 md:py-5 left-20 absolute lg:px-8 lg:py-5 lg:left-[300px] lg:mt-48"}>Buyurtma berish</Button>
+              <Button className={"  top-[400px] md:top-[350px] md:px-6 md:py-5 left-20 absolute lg:px-8 lg:py-5 lg:left-[300px] lg:mt-48"}><a  href="#product">Buyurtma berish</a></Button>
             </div>
           );
         })}

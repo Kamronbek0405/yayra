@@ -17,7 +17,6 @@ export const Basket = () => {
     AOS.refresh(); 
   }, [location.pathname]);
 
-  // Foydalanuvchi bosh sahifaga kirsa, birinchi mahsulotga yo'naltirish
   useEffect(() => {
     if (location.pathname === '/' || location.pathname === '/') {
       navigate(`/pricing/${pricingData[0].id}`, { replace: true });
@@ -25,7 +24,7 @@ export const Basket = () => {
   }, [location, navigate]);
 
   return (
-    <div>
+    <div id='product'>
      
       {location.pathname === '/' && (
         <div className="products-list">

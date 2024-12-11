@@ -6,18 +6,18 @@ import { useDispatch } from 'react-redux';
 import { removeProduct } from '@/page/redux/products/product-reducer'; 
 
 export const ProductCard = ({ id, img, price, title, description2, name }) => {
-  const [isRemoved, setIsRemoved] = useState(false); // false bo'lishi kerak agar mahsulot yo'q bo'lsa
+  const [isRemoved, setIsRemoved] = useState(false); 
   const dispatch = useDispatch(); 
 
   const handleRemove = () => {
     dispatch(removeProduct(id)); 
-    setIsRemoved(true); // Mahsulot sotib olingan deb belgilash
+    setIsRemoved(true); 
     toast.success("Mahsulot sotib olindi!");
   };
 
   const handleDelete = () => {
     dispatch(removeProduct(id)); 
-    setIsRemoved(true); // Mahsulot o'chirilgan deb belgilash
+    setIsRemoved(true); 
     toast.error("Mahsulot o'chirildi!"); 
   };
   if(isRemoved) {

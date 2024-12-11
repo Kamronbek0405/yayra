@@ -4,11 +4,21 @@ import { portfolioData } from '@/data/data-service'
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const Portfolio = () => {
   useEffect(() => {
     AOS.init({ duration: 1000 }); 
   }, []);
+
+  const {handleSubmit, register, reset} = useForm()
+
+  const submit = (data) => {
+    reset()
+    toast.success("Malumot yuborildi!")
+  }
   return (
     <div>
         {portfolioData?.map((item) => (
@@ -18,12 +28,12 @@ export const Portfolio = () => {
                 <h1 className=' text-lg md:text-3xl  lg:text-5xl font-medium lg:w-[400px] py-3 lg:leading-tight '>{item.title}</h1>
                 <p className='  text-sm lg:w-[400px] md:mt-2 md:text-lg '>{item.description}</p>
                </div>
-              <form className='flex flex-col gap-5'>
+              <form onSubmit={handleSubmit(submit)} className='flex flex-col gap-5'>
                <div className='w-[320px] '>
-               <Input className={"rounded-full bg-portfolioInput border-none text-white py-6"} type={"text"} placeholder={`${item.name}`} required data-aos="fade-right"/>
+               <Input {...register("name")} className={"rounded-full bg-portfolioInput border-none text-white py-6"} type={"text"} placeholder={`${item.name}`} required data-aos="fade-right"/>
                </div>
                <div className='w-[320px] '>
-               <Input className={"rounded-full bg-portfolioInput  text-white border-none py-6"} type={"number"}  placeholder={`${item.phone}`} required data-aos="fade-left"/>
+               <Input {...register("phone")} className={"rounded-full bg-portfolioInput  text-white border-none py-6"} type={"number"}  placeholder={`${item.phone}`} required data-aos="fade-left"/>
                </div>
                 <Button className={"w-[320px] rounded-full py-6"} type={"submit"} data-aos="fade-right">{item.textButton}</Button>
               </form>

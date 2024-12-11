@@ -34,9 +34,10 @@ export const BasketDeteil = () => {
     const basketShooting = () => {
         navigate(`/basket-single/${id}`); 
     }
+    
 
     return ( 
-        <div id='' className=' flex overflow-hidden flex-col items-center gap-6 mt-7 md:w-[100%] md:h-[120vh] md:py-5 md:items-center md:justify-center md:flex md:flex-row md:flex-wrap  lg:h-[670px] bg-slate-100 lg:flex-row lg:flex lg:items-center  lg:justify-center lg:gap-7 '>
+        <div id='1' className=' flex overflow-hidden flex-col items-center gap-6 mt-7 md:w-[100%] md:h-[120vh] md:py-5 md:items-center md:justify-center md:flex md:flex-row md:flex-wrap  lg:h-[670px] bg-slate-100 lg:flex-row lg:flex lg:items-center  lg:justify-center lg:gap-7 '>
             <div className='  w-[350px] h-[534px] py-8   bg-white rounded-xl md:py-10 lg:py-5 px-8 flex flex-col items-start justify-between '  data-aos="zoom-in-right">
                 <img className='lg:ml-5' src={basketItem.img} alt="img" />
                 <div >
@@ -50,7 +51,7 @@ export const BasketDeteil = () => {
                 </div>
             </div>
 
-            <div className=' flex   flex-wrap justify-center lg:order-1   items-center gap-5 md:order-2 md:gap-10 md:flex md:flex-row md:items-center md:justify-center  md:flex-wrap lg:flex lg:flex-wrap  lg:w-[700px] lg:h-[550px] lg:gap-2 lg:items-center lg:justify-center  '>
+            <div id='2' className=' flex   flex-wrap justify-center lg:order-1   items-center gap-5 md:order-2 md:gap-10 md:flex md:flex-row md:items-center md:justify-center  md:flex-wrap lg:flex lg:flex-wrap  lg:w-[700px] lg:h-[550px] lg:gap-2 lg:items-center lg:justify-center  '>
                 <div className='w-[160px] h-[210px] px-3 py-2 bg-white md:w-[320px] md:px-12 md:py-7 md:h-[400px]  lg:px-5 lg:py-2 lg:mr-12 lg:w-[250px] lg:h-[300px] rounded-xl lg:ml-10  ' data-aos="flip-left" data-aos-easing="ease-out-cubic"     data-aos-duration="2000" >
                     <img className='  md:ml-8  md:w-[180px] md:h-[180px] lg:w-[180px] lg:h-[180px] lg:-ml-0.5' src={basketItem.img} alt="" />
                     <p className='lg:mt-2 md:mt-14 font-medium lg:text-lg'>{basketItem.price}</p>
@@ -59,7 +60,7 @@ export const BasketDeteil = () => {
                     {basketItem.arrowIcon && <basketItem.arrowIcon/>}
                     </div>
                 </div>
-                <div className='w-[160px] h-[210px] px-3 py-2 bg-white md:w-[320px] md:px-12 md:py-7 md:h-[400px]  lg:px-5 lg:py-2 lg:mr-12 lg:w-[250px] lg:h-[300px]  rounded-xl ' data-aos="flip-left" data-aos-easing="ease-out-cubic"     data-aos-duration="2000">
+                <div id='3' className='w-[160px] h-[210px] px-3 py-2 bg-white md:w-[320px] md:px-12 md:py-7 md:h-[400px]  lg:px-5 lg:py-2 lg:mr-12 lg:w-[250px] lg:h-[300px]  rounded-xl ' data-aos="flip-left" data-aos-easing="ease-out-cubic"     data-aos-duration="2000">
                     <img className='  md:ml-8  md:w-[180px] md:h-[180px] lg:w-[180px] lg:h-[180px] lg:-ml-0.5' src={basketItem.img} alt="" />
                     <p className='lg:mt-2 md:mt-14 font-medium lg:text-lg'>{basketItem.price}</p>
                     <div className='flex items-center gap-2 lg:gap-5 lg:mt-3'>

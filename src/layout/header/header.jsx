@@ -13,8 +13,10 @@ import { useNavigate } from 'react-router-dom';
 import { ExitIcon } from '@/icon/exit-icon';
 import { MenuIcon } from '@/icon/menu-icon';
 
+
 export const Header = () => {
   const navigate = useNavigate();
+
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State to control menu visibility
@@ -41,32 +43,60 @@ export const Header = () => {
   };
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen); 
+    setIsMenuOpen(!isMenuOpen);
   };
 
   const scrollToSection = (sectionId) => {
     const section = document.querySelector(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' }); 
+      section.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
+
+
+
+
+
+
+
+
+
+  const handleScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleNavigation = (value) => {
+    const path = `/pricing/${value}`; // Form the URL like /pricing/1, /pricing/2, etc.
+    navigate(path); // First navigate to the new page
+
+    // After navigating, scroll to the target section by ID
+    setTimeout(() => {
+      handleScroll(value); // Scroll to the ID based on value after navigation
+    }, 300); // Wait for navigation to complete
+  };
+
+
+
   return (
     <div className='w-[100%] m-auto py-5 bg-[url("/blur.png")] bg-no-repeat bg-cover flex items-center justify-between  px-4'>
-      <Link  to={'/'}>
+      <Link to={'/'}>
         <img src={Logo} alt='logoImg' />
       </Link>
 
       {windowWidth <= 600 && (
         <Button onClick={toggleMenu} className="text-black text-2xl  outline-none shadow-none bg-transparent hover:bg-transparent">
-          {isMenuOpen ? <ExitIcon /> : <MenuIcon />} 
+          {isMenuOpen ? <ExitIcon /> : <MenuIcon />}
         </Button>
       )}
 
-    
+
       {isMenuOpen && windowWidth <= 800 && (
         <div className="absolute   flex flex-col items-center justify-start top-24 left-0 w-[100%] h-[400px] bg-white z-10 p-5">
-         
+
           <nav>
             <ul className='flex flex-col items-center  gap-6 text-xl font-medium '>
               <li>
@@ -102,21 +132,23 @@ export const Header = () => {
         </div>
       )}
 
-    
+
       {windowWidth > 500 && (
         <div className=' m-auto md:flex md:items-center lg:flex lg:items-center lg:gap-12 '>
-        
+
           <nav>
             <ul className='flex  items-start md:text-sm md:mr-14  lg:text-lg lg:gap-5 lg:ml-64 font-medium '>
               <li>
-                <div className=' md:w-[80px]  lg:w-[110px] text-2xl'>
-                  <Select className={"border-none  p-0"}>
-                    <SelectTrigger className={'lg:text-md'}>Product</SelectTrigger>
+                <div className="md:w-[80px] lg:w-[110px] text-2xl">
+                  <Select
+                    className="border-none p-0"
+                    onValueChange={(value) => handleNavigation(value)} 
+                  >
+                    <SelectTrigger className="lg:text-md">Product</SelectTrigger>
                     <SelectContent>
-                      <SelectItem value='option1'>Option 1</SelectItem>
-                      <SelectItem value='option2'>Option 2</SelectItem>
-                      <SelectSeparator />
-                      <SelectItem value='option3'>Option 3</SelectItem>
+                      <SelectItem value="1">supurgilar</SelectItem>
+                      <SelectItem value="2">machalkalar</SelectItem>
+                      <SelectItem value="3">chelaklar</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
