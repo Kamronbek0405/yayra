@@ -1,9 +1,12 @@
 import React from 'react';
-import { Facebook } from '@/icon/facebook';
 import { foooterData } from '@/data/data-service';
 import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import { basketData } from '@/data/data-service';
 
 export const Footer = () => {
+  const {id} = useParams()
+  const basketItem = basketData.find(item => item.id === parseInt(id));
   return (
     <div className='  flex flex-col items-center justify-center text-center h-[950px] lg:flex   w-[100%] lg:h-[500px] md:gap-12  md:h-[500px]  md:px-20  md:flex md:flex-row md:items-center md:justify-center md:flex-wrap lg:flex-row lg:items-center lg:justify-between lg:px-20 lg:text-left  '>
      <div className='     md:w-[300px] md:flex   lg:flex lg:w-[300px]  lg:items-start '>
@@ -30,10 +33,10 @@ export const Footer = () => {
             <div className='flex flex-col gap-5  '>
             <strong >{item.name}</strong>
             <ul className='flex flex-col gap-4'>
-              <a href="">{item.text}</a>
+              <a href="#myaccount">{item.text}</a>
               <Link to={"/login"}>{item.text2}</Link>
-              <a href="">{item.text3}</a>
-              <a href="">{item.text4}</a>
+              <a href="#wishlist">{item.text3}</a>
+              <Link to={`/basket-single/${id}`}>{item.text4}</Link>
               
             </ul>
           </div>
@@ -48,7 +51,7 @@ export const Footer = () => {
               <a href="">{item.text}</a>
               <a href=''>{item.text2}</a>
               <a href="">{item.text3}</a>
-              <a href="">{item.text4}</a>
+              <a href="#asked">{item.text4}</a>
               
             </ul>
           </div>
@@ -59,10 +62,10 @@ export const Footer = () => {
             <div className='flex flex-col gap-5  '>
             <strong >{item.name}</strong>
             <ul className='flex flex-col gap-4'>
-              <a href="">{item.text}</a>
+              <a href="#about">{item.text}</a>
               <a href=''>{item.text2}</a>
               <a href="">{item.text3}</a>
-              <a href="">{item.text4}</a>
+              <a href="#contact">{item.text4}</a>
               
             </ul>
           </div>

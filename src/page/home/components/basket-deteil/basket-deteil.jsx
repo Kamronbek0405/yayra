@@ -35,8 +35,8 @@ export const BasketDeteil = () => {
         navigate(`/basket-single/${id}`); 
     }
 
-    return (
-        <div className=' flex overflow-hidden flex-col items-center gap-6 mt-7 md:w-[100%] md:h-[120vh] md:py-5 md:items-center md:justify-center md:flex md:flex-row md:flex-wrap  lg:h-[670px] bg-slate-100 lg:flex-row lg:flex lg:items-center  lg:justify-center lg:gap-7 '>
+    return ( 
+        <div id='' className=' flex overflow-hidden flex-col items-center gap-6 mt-7 md:w-[100%] md:h-[120vh] md:py-5 md:items-center md:justify-center md:flex md:flex-row md:flex-wrap  lg:h-[670px] bg-slate-100 lg:flex-row lg:flex lg:items-center  lg:justify-center lg:gap-7 '>
             <div className='  w-[350px] h-[534px] py-8   bg-white rounded-xl md:py-10 lg:py-5 px-8 flex flex-col items-start justify-between '  data-aos="zoom-in-right">
                 <img className='lg:ml-5' src={basketItem.img} alt="img" />
                 <div >

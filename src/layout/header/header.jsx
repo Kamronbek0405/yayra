@@ -41,25 +41,25 @@ export const Header = () => {
   };
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen); // Toggle menu visibility
+    setIsMenuOpen(!isMenuOpen); 
   };
 
   const scrollToSection = (sectionId) => {
     const section = document.querySelector(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' }); // Smooth scrolling
+      section.scrollIntoView({ behavior: 'smooth' }); 
     }
   };
 
   return (
-    <div className='w-[100%] m-auto py-5 bg-[url("/blur.png")] bg-no-repeat bg-cover flex items-center justify-between px-4'>
+    <div className='w-[100%] m-auto py-5 bg-[url("/blur.png")] bg-no-repeat bg-cover flex items-center justify-between  px-4'>
       <Link  to={'/'}>
         <img src={Logo} alt='logoImg' />
       </Link>
 
       {windowWidth <= 600 && (
         <Button onClick={toggleMenu} className="text-black text-2xl  outline-none shadow-none bg-transparent hover:bg-transparent">
-          {isMenuOpen ? <ExitIcon /> : <MenuIcon />} {/* X icon when menu is open */}
+          {isMenuOpen ? <ExitIcon /> : <MenuIcon />} 
         </Button>
       )}
 
@@ -104,10 +104,10 @@ export const Header = () => {
 
     
       {windowWidth > 500 && (
-        <div className=' m-auto md:flex md:items-center lg:flex lg:items-center lg:gap-10  '>
+        <div className=' m-auto md:flex md:items-center lg:flex lg:items-center lg:gap-12 '>
         
           <nav>
-            <ul className='flex  items-start md:text-sm md:mr-14  lg:text-lg lg:gap-5 lg:mr-40 font-medium '>
+            <ul className='flex  items-start md:text-sm md:mr-14  lg:text-lg lg:gap-5 lg:ml-64 font-medium '>
               <li>
                 <div className=' md:w-[80px]  lg:w-[110px] text-2xl'>
                   <Select className={"border-none  p-0"}>
@@ -141,7 +141,7 @@ export const Header = () => {
           <Button
             onClick={register}
             className={
-              'bg-transparent md:px-7 md:mr-2 text-black hover:text-white lg:w-[137px] lg:h-[52px] rounded-xl'
+              'bg-transparent md:px-7 md:mr-2 text-black hover:text-white lg:w-[137px] lg:h-[52px] lg:ml-40 rounded-xl'
             }>
             Sign In
           </Button>

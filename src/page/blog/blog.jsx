@@ -9,7 +9,7 @@ export const Blog = () => {
     AOS.init({ duration: 1000 }); // AOS ni boshlash va davomiylikni sozlash
   }, []);
   return (
-    <div>
+    <div id='asked'>
       {blogData?.slice(0,1).map((item) => (
         <div className=' ml-8 lg:px-20 h-auto   flex items-center justify-between flex-col lg:gap-10'>
           

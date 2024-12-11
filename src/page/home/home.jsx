@@ -9,6 +9,7 @@ import { Blog } from '../blog'
 import { Portfolio } from './components/portfolio'
 import { Busines } from '../business'
 import { Footer } from '@/layout/footer'
+import { About } from './components/about'
 
 export const Home = () => {
   
@@ -23,19 +24,22 @@ export const Home = () => {
       <section id='pricing' className='lg:w-[1519px] lg:h-[100vh]  m-auto  '>
         <Basket />
       </section>
-      <section className=' w-[100%] h-[60vh] overflow-hidden m-auto lg:w-[1519px] lg:h-[100vh]  flex items-center justify-center'>
+      <section  className=' w-[100%] h-[60vh] overflow-hidden m-auto lg:w-[1519px] lg:h-[100vh]  flex items-center justify-center'>
         <Invite/>
       </section>
       <section className=' w-[100%] h-[210vh] md:h-[121vh]  lg:w-[1519px] lg:h-[130vh] m-auto'>
         <Cotolog/>
       </section>
-      <section className=' w-[100%] h-[520px]   lg:w-[1519px]  md:h-[520px] lg:h-[100vh] overflow-hidden  m-auto flex items-center  justify-center'>
+      <section id='myaccount' className=' w-[100%] h-[520px]   lg:w-[1519px]  md:h-[520px] lg:h-[100vh] overflow-hidden  m-auto flex items-center  justify-center'>
         <Clients/>
       </section>
       <section id='blog' className=' w-[100%] h-[220vh]  md:h-[110vh] lg:w-[1519px] lg:h-[100vh] overflow-hidden m-auto flex items-center  justify-center '>
         <Blog/>
       </section>
-      <section className=' w-[100%] h-[650px] lg:w-[100%] lg:h-[52vh] md:h-[500px] bg-portfolioColor flex items-center justify-center'>
+      <section id='wishlist'  className=' w-[100%] h-[880px] md:h-[850px]   lg:w-[1519px] lg:h-[150vh]  '>
+        <About/>
+      </section>
+      <section id='contact' className=' w-[100%] h-[650px] lg:w-[100%] lg:h-[52vh] md:h-[500px] bg-portfolioColor flex items-center justify-center'>
         <Portfolio/>
       </section>
       <section>

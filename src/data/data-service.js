@@ -1,13 +1,20 @@
 
+import { Bucket } from '@/icon/bucket';
+import { Bucket2 } from '@/icon/bucket2';
+
 export const heroData = [
     {
         id: 1,
         text: "Ulgurji narxlarda vositalar",
+        bucketIcon: Bucket,
+       
+
 
     },
     {
         id: 2,
         text: "Ulgurji narxlarda vositalar",
+        bucketIcon2: Bucket2,
 
     }
 ];
@@ -289,3 +296,31 @@ import basketImg2 from '@/page/home/components/basket/basket-img/basketimg2.png'
     }
 
 ]
+
+import aboutImg from '@/page/home/components/about/about-img/aboutbroom.png'
+import aboutoverlay from '@/page/home/components/about/about-img/overlay.png'
+export const aboutData = [
+{
+    id: 1,
+    day: "25 Aug 2020 by Merkulove",
+    title: "Practical Suggestions To Improve Usability Landing",
+    description: "Fusce in nisi ut libero consequat mollis. Donec pulvinar elementum nisl, non hendre",
+    broomImg: aboutImg,
+
+},
+{
+    id: 2,
+    day: "25 Aug 2020 by Merkulove",
+    title: "Practical Suggestions To Improve Usability Landing",
+    description: "Fusce in nisi ut libero consequat mollis. Donec pulvinar elementum nisl, non hendre",
+    overlayImg: aboutoverlay,
+
+},
+{
+    top: "About Company",
+    title: "Fun Facts About Farmino",
+    description: "Fusce in nisi ut libero consequat mollis. Donec pulvinar elementum nisl, non hendrerit ipsum consequat eu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper, velit at mollis vehicula, neque arcu ultricies eros",
+    
+}
+]
+

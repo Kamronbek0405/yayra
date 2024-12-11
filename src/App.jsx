@@ -12,6 +12,8 @@ import { loadState } from './config/storage';
 import { useNavigate } from 'react-router-dom';
 import { BasketDeteil } from './page/home/components/basket-deteil';
 import { BasketSingle } from './page/home/components/basket-single';
+import { ToastContainer } from 'react-toastify'; 
+import 'react-toastify/dist/ReactToastify.css'; 
 
 function App() {
   const navigate = useNavigate()
@@ -23,8 +25,10 @@ function App() {
       navigate('/login');  
     }
   }, [navigate]);
+  
   return (
     <>
+      <ToastContainer />
       <Routes>
         <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login />} />
