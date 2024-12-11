@@ -23,7 +23,7 @@ export const Cotolog = () => {
                             <Button className={"rounded-full bg-black py-6 px-7"} startIcon={SeeIcon} >{item.view}</Button>
                         </div>
                     </div>
-                    <div className=' w-[100%] gap-12  lg:px-10 h-[700px] flex  flex-col lg:gap-16'>
+                    <div id='policy' className=' w-[100%] gap-12  lg:px-10 h-[700px] flex  flex-col lg:gap-16'>
                         <h1 className=' text-3xl ml-24 mt-10 md:text-3xl md:mt-20 lg:text-4xl font-medium lg:mt-20 lg:ml-28'>{item.advantages}</h1>
                         <div className='flex flex-col items-center justify-center gap-7 md:flex-row md:flex-wrap lg:flex-row lg:items-center lg:justify-center lg:gap-10'
 >

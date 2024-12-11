@@ -48,9 +48,9 @@ export const Footer = () => {
             <div className='flex flex-col gap-5  '>
             <strong >{item.name}</strong>
             <ul className='flex flex-col gap-4'>
-              <a href="">{item.text}</a>
-              <a href=''>{item.text2}</a>
-              <a href="">{item.text3}</a>
+              <a href="#policy">{item.text}</a>
+              <a href='#catalog'>{item.text2}</a>
+              <a href="#policy">{item.text3}</a>
               <a href="#asked">{item.text4}</a>
               
             </ul>
@@ -63,8 +63,8 @@ export const Footer = () => {
             <strong >{item.name}</strong>
             <ul className='flex flex-col gap-4'>
               <a href="#about">{item.text}</a>
-              <a href=''>{item.text2}</a>
-              <a href="">{item.text3}</a>
+              <a href='#policy'>{item.text2}</a>
+              <a href="#invite">{item.text3}</a>
               <a href="#contact">{item.text4}</a>
               
             </ul>
