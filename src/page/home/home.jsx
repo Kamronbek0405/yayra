@@ -36,7 +36,7 @@ export const Home = () => {
       <section id='blog' className=' w-[100%] h-[220vh]  md:h-[110vh] lg:w-[1519px] lg:h-[100vh] overflow-hidden m-auto flex items-center  justify-center '>
         <Blog/>
       </section>
-      <section id='wishlist'  className=' w-[100%] h-[880px] md:h-[850px]   lg:w-[1519px] lg:h-[150vh]  '>
+      <section id='wishlist'  className=' w-[100%] h-[880px] md:h-[850px]   lg:w-[1519px] lg:h-[150vh] m-auto  '>
         <About/>
       </section>
       <section id='contact' className=' w-[100%] h-[650px] lg:w-[100%] lg:h-[52vh] md:h-[500px] bg-portfolioColor flex items-center justify-center'>
