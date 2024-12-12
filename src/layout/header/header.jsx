@@ -116,13 +116,14 @@ export const Header = () => {
               </li>
               <li>
                 <div className=''>
-                  <Select>
+                  <Select className="border-none p-0"
+                    onValueChange={(value) => handleNavigation(value)}>
+                    
                     <SelectTrigger className={'text-lg font-medium'}>Product</SelectTrigger>
                     <SelectContent className={"font-medium"}>
-                      <SelectItem className={"font-medium"} value='option1'>Option 1</SelectItem>
-                      <SelectItem value='option2'>Option 2</SelectItem>
-                      <SelectSeparator />
-                      <SelectItem value='option3'>Option 3</SelectItem>
+                      <SelectItem value="1">supurgilar</SelectItem>
+                      <SelectItem value="2">machalkalar</SelectItem>
+                      <SelectItem value="3">chelaklar</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -142,7 +143,7 @@ export const Header = () => {
                 <div className="md:w-[80px] lg:w-[110px] text-2xl">
                   <Select
                     className="border-none p-0"
-                    onValueChange={(value) => handleNavigation(value)} 
+                    onValueChange={(value) => handleNavigation(value)}
                   >
                     <SelectTrigger className="lg:text-md">Product</SelectTrigger>
                     <SelectContent>
